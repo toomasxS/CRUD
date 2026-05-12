@@ -11,7 +11,7 @@ public class App {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
 
-        // ================= HOME =================
+        // HOME 
 
         server.createContext("/", exchange -> {
 
@@ -117,7 +117,7 @@ public class App {
 
         });
 
-        // ================= CLIENTES =================
+        //CLIENTES
 
         server.createContext("/clientes", exchange -> {
 
@@ -241,7 +241,7 @@ public class App {
 
         });
 
-        // ================= NOVO CLIENTE =================
+        // NOVO CLIENTE
 
         server.createContext("/novo", exchange -> {
 
@@ -312,7 +312,7 @@ public class App {
 
         });
 
-        // ================= GUARDAR CLIENTE =================
+        // GUARDAR CLIENTE
 
         server.createContext("/guardar", exchange -> {
 
@@ -394,7 +394,7 @@ public class App {
 
         });
 
-        // ================= EDITAR CLIENTE =================
+        // EDITAR CLIENTE
 
         server.createContext("/editar", exchange -> {
 
@@ -476,7 +476,7 @@ public class App {
 
         });
 
-        // ================= ATUALIZAR CLIENTE =================
+        //  ATUALIZAR CLIENTE
 
         server.createContext("/atualizar", exchange -> {
 
@@ -562,7 +562,7 @@ public class App {
 
         });
 
-        // ================= APAGAR CLIENTE =================
+        //  APAGAR CLIENTE 
 
         server.createContext("/apagar", exchange -> {
 
@@ -707,7 +707,7 @@ public class App {
 
         });
 
-        // ================= NOVO PRODUTO =================
+        // NOVO PRODUTO
 
         server.createContext("/novoProduto", exchange -> {
 
@@ -749,7 +749,7 @@ public class App {
 
         });
 
-        // ================= GUARDAR PRODUTO =================
+        //  GUARDAR PRODUTO 
 
         server.createContext("/guardarProduto", exchange -> {
 
@@ -815,8 +815,6 @@ public class App {
             }
 
         });
-
-        // ================= INICIAR SERVIDOR =================
 
         server.start();
 
