@@ -1,12 +1,12 @@
 public class Produto {
    
-    public int idP;
-    public int refProduto;
+    public int id;
+    public String refProduto;
     public String produto;
     public int preco;
 
-    public Produto(int idP, int refProduto, String produto, int preco) {
-        this.idP = idP;
+    public Produto(int id, String refProduto, String produto, int preco) {
+        this.id = id;
         this.refProduto = refProduto;
         this.produto = produto;
         this.preco = preco;
@@ -15,6 +15,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return produto;
+        return refProduto;
     }
 }
