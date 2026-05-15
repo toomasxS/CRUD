@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Tempo de geração: 08-Maio-2026 às 16:01
+-- Tempo de geração: 15-Maio-2026 às 11:34
 -- Versão do servidor: 8.4.9
 -- versão do PHP: 8.3.26
 
@@ -43,8 +43,24 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nif`, `nome`, `email`, `telefone`) VALUES
-(1, '', 'Tomás Stasto', '123@sapo.pt', '929141216'),
-(2, '', 'Pastel Serra', 'goncaloserra@gmail.com', '929141215');
+(1, '67', 'Tomás Stasto', '123@sapo.pt', '929141216'),
+(2, '67', 'Pastel Serra', 'goncaloserra@gmail.com', '929141215'),
+(5, '67', 'Davi', 'davi@gmail.com', '929141215'),
+(6, '67', 'curioso', 'curioso@curioso.curioso', '32435636354');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `prodtuos`
+--
+
+DROP TABLE IF EXISTS `prodtuos`;
+CREATE TABLE `prodtuos` (
+  `id` int NOT NULL,
+  `refProduto` varchar(100) DEFAULT NULL,
+  `produto` varchar(100) DEFAULT NULL,
+  `preco` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Índices para tabelas despejadas
@@ -57,6 +73,12 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `prodtuos`
+--
+ALTER TABLE `prodtuos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -64,7 +86,13 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de tabela `prodtuos`
+--
+ALTER TABLE `prodtuos`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

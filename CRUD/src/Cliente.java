@@ -4,9 +4,10 @@ public class Cliente {
     public String nome;
     public String email;
     public String telefone;
+    public String nif;
 
-    public Cliente(int id, String nome, String email, String telefone) {
-
+    public Cliente(int id, String nome, String email, String telefone, String nif) {
+        this.nif = nif;
         this.id = id;
         this.nome = nome;
         this.email = email;

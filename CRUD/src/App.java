@@ -668,7 +668,7 @@ public class App {
 
                 String produto = "";
 
-                String preco = "";
+                float preco = 0f;
 
                 for (String p : params) {
 
@@ -691,7 +691,7 @@ public class App {
                                 break;
 
                             case "preco":
-                                preco = value;
+                                preco = Float.parseFloat(value);
                                 break;
 
                         }
@@ -714,7 +714,7 @@ public class App {
 
                 ps.setString(2, produto);
 
-                ps.setString(3, preco);
+                ps.setFloat(3, preco);
 
                 ps.executeUpdate();
                 ps.close();
